@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    total_scores = 0
+    for i in list (student_marks[query_name]):
+        total_scores += i
+    
+    print("{:.2f}".format(total_scores/3)) #":.2f" ifadesi bize ogrenci notu ortalamasinin noktadan sonra 2 haneli hassasiyete sahip olmasini sagliyor.
